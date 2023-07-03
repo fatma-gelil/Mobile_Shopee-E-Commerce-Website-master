@@ -18,49 +18,7 @@
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="style.css">
     <?php
-    //require database connection
-    require ('database/DBController.php');
-    $db = new DBController();
-    $db->con=null;
-   $file_path = 'database/DBController.php'; // the file path to check
-   if (file_exists($file_path)) {
-        require($file_path); // if the file exists, include it
-        echo "yes";
-    } else {
-       echo "Error: Could not find file '$file_path'"; // if the file does not exist, display an error message
-   }
-
-//    var_dump($con);
-//    $con=mysqli_connect('localhost','root','','shop');
-//    if($con->connect_error){
-//        echo 'Fail';
-//    }else{
-//        echo 'done';
-//    }
-    $servername = "localhost";
-    $database = "shop";
-    $username = "root";
-    $password = "";
-    $charset = "utf8mb4";
-    //    phpinfo();
-    //    echo ini_get('extension_dir');
-//        try {
-//        $dsn = "mysql:host=$servername;dbname=$database;charset=$charset";
-//        $pdo= new PDO($dsn,$username,$password);
-//        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//
-//                echo 'rr';
-//
-//                return $pdo;
-//
-//                }
-//
-//                catch (PDOException $e)
-//
-//                {
-//                echo  $e->getMessage();
-//                }
-
+    require ('functions.php');
 //    var_dump('rr');
 //    print_r(PDO::getAvailableDrivers());
     ?>
